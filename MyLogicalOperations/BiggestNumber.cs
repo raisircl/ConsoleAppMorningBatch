@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppMorningBatch.MyLogicalOperations
 {
+    
     internal class BiggestNumber
     {
+        
+        
 
     }
 }
