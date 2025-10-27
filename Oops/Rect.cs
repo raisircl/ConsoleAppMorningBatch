@@ -74,7 +74,7 @@ namespace ConsoleAppMorningBatch.Oops
             _length = r._length;
             _breadth = r._breadth;
         }
-
+        //constructor overloading
         public int Length
         {
             get { return _length; }
@@ -91,7 +91,22 @@ namespace ConsoleAppMorningBatch.Oops
         {
             return _length * _breadth;
         }
-
+        public Rect Add(Rect r)
+        {
+            // this is a pointer which points to current object
+            Rect newRect =new Rect();
+            newRect.Length = this.Length + r.Length;
+            newRect.Breadth = this.Breadth + r.Breadth;
+            return newRect;
+        }
+        //operator overloading
+        public static Rect operator +(Rect r1, Rect r2)
+        {
+            Rect newRect = new Rect();
+            newRect.Length = r1.Length + r2.Length;
+            newRect.Breadth = r1.Breadth + r2.Breadth;
+            return newRect;
+        }
     }
 }
 
@@ -113,4 +128,20 @@ Assignment2: Create a class named BankAccount with the following specifications:
    - Deposit(double amount): Adds the specified amount to the balance.
    - Withdraw(double amount): Subtracts the specified amount from the balance if sufficient funds are available; otherwise, displays an error message.
    - DisplayAccountInfo(): Displays the account number, account holder, and current balance.
+
+Assignment3: Create a class named Box with the following specifications:
+1. Private fields: length (double), breadth (double), height (double)
+2. Public properties: Length (get and set), Breadth (get and set), Height (get and set)
+3. Default constructor: Initializes length, breadth, and height to 1.0
+4. Parameterized constructor: Accepts three double parameters to initialize length, breadth, and height
+5. Copy constructor: Accepts another Box object to initialize length, breadth, and height
+6. Public method: Volume() - Returns the volume of the box (length * breadth * height)
+7. Compare 2 boxes using operator overloading for '>' and '<' or == or != based on their volumes.
+
+Tip: 
+1. Relational Operator always return either true or false (bool)
+
+2. if you defined < then its you must defined > also   
+
+
 */
