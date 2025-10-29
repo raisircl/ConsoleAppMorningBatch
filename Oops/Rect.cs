@@ -42,7 +42,7 @@ namespace ConsoleAppMorningBatch.Oops
 {
     //public, private , protected, internal, protected internal, private protected
     //These are access specifiers or access modifiers: a class or its members can be accessed by other classes or members
-    public class Rect
+    public class Rect: Quadrilateral
     {
         private int _length; // field or data member
         private int _breadth; // field or data member
@@ -61,15 +61,18 @@ namespace ConsoleAppMorningBatch.Oops
 
         public Rect() // default constructor
         {
+            Console.WriteLine("Rect default constructor called");       
             _length = 1;
             _breadth = 1;
         }
-        public Rect(int l, int b) // parameterized constructor
+        public Rect(int l, int b):base(l,b,l,b) // parameterized constructor
         {
+            // calling parent class parameterized constructor
+
             _length = l;
             _breadth = b;
         }
-        public Rect(Rect r) // copy constructor
+        public Rect(Rect r):base(r._length,r._breadth,r._length,r._breadth) // copy constructor
         {
             _length = r._length;
             _breadth = r._breadth;
