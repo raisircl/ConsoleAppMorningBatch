@@ -51,20 +51,27 @@ namespace ConsoleAppMorningBatch.Oops
             //    Console.WriteLine("Boxes are not equal in volume");
             //}
 
-            Rect rect = new Rect(); //default constructor   
+            //Rect rect = new Rect(); //default constructor   
+
+            //int p= rect.Perimeter(); // calling inherited method   
+            //Console.WriteLine($"Perimeter of Rect is {p}");
+
+            //Rect rect2 = new Rect(15, 25); // parameterized constructor 
+            //int p1= rect2.Perimeter();
+            //Console.WriteLine($"Perimeter of Rect2 is {p1}");
+
+            //Square sq = new Square(5); // default constructor    
+            //int sp = sq.Perimeter(); // calling inherited method    
+            //Console.WriteLine($"Perimeter of Square is {sp}");
+            //int sarea = sq.Area(); // calling own method    
+            //Console.WriteLine($"Area of Square is {sarea}");
+            Animal a = new Animal();
+            a.Speak(); // Animal speaks
             
-            int p= rect.Perimeter(); // calling inherited method   
-            Console.WriteLine($"Perimeter of Rect is {p}");
+            Animal d = new Dog(); // in oops base class ref variable can take the ref of derive class object
+                                  // and can access only the base class members
+            d.Speak();
 
-            Rect rect2 = new Rect(15, 25); // parameterized constructor 
-            int p1= rect2.Perimeter();
-            Console.WriteLine($"Perimeter of Rect2 is {p1}");
-
-            Square sq = new Square(5); // default constructor    
-            int sp = sq.Perimeter(); // calling inherited method    
-            Console.WriteLine($"Perimeter of Square is {sp}");
-            int sarea = sq.Area(); // calling own method    
-            Console.WriteLine($"Area of Square is {sarea}");
         }
     }
 }
