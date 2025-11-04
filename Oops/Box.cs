@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppMorningBatch.Oops
 {
-    public class Box
+    public class Box:IShape
     {
         private int _length; // field or data member
         private int _breadth; // field or data member
@@ -49,6 +49,12 @@ namespace ConsoleAppMorningBatch.Oops
         {
             return _length * _breadth * _height;
         }
+
+        public int Area()
+        {
+           return _length*_breadth;
+        }
+
         public static bool operator==(Box b1, Box b2)
         {
             return b1.Volume() == b2.Volume();    

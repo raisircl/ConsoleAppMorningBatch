@@ -42,7 +42,7 @@ namespace ConsoleAppMorningBatch.Oops
 {
     //public, private , protected, internal, protected internal, private protected
     //These are access specifiers or access modifiers: a class or its members can be accessed by other classes or members
-    public class Rect: Quadrilateral
+    public class Rect: Quadrilateral, IShape
     {
         private int _length; // field or data member
         private int _breadth; // field or data member
